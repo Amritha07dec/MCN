@@ -1,3 +1,4 @@
+
 import numpy as np
 
 """
@@ -152,17 +153,17 @@ ode_systems = {
             ([12.0, 6], [1.0, 0.5, 0.5, 0.5, 1.0, 0.0], 'chaotic')     # 6D chaotic system
         ]
     },
-    # 'Duffing_Oscillator': {
-    #     'DCF_values': ['Poly', 3, 0],
-    #     'rhs_function': lambda t, y, params: [
-    #         y[1],  # dx/dt = y
-    #         -params[0] * y[1] - params[1] * y[0] - params[2] * y[0]**3 + params[3] * np.cos(params[4] * t)  # dy/dt = -delta * y - alpha * x - beta * x^3 + gamma * cos(omega * t)
-    #     ],
-    #     'parameters_and_IC': [
-    #         ([0.2, 1.0, 0.5, 0.3, 1.0], [1.0, 0.0], 'cyclic'),  # Typical cyclic motion
-    #         ([0.2, 1.0, 0.5, 0.8, 1.0], [0.5, 0.0], 'chaotic'),  # Chaotic motion
-    #     ]
-    # },
+     'Duffing_Oscillator': {
+         'DCF_values': ['Poly', 3, 0],
+         'rhs_function': lambda t, y, params: [
+             y[1],  # dx/dt = y
+             -params[0] * y[1] - params[1] * y[0] - params[2] * y[0]**3 + params[3] * np.cos(params[4] * t)  # dy/dt = -delta * y - alpha * x - beta * x^3 + gamma * cos(omega * t)
+         ],
+         'parameters_and_IC': [
+             ([0.2, 1.0, 0.5, 0.3, 1.0], [1.0, 0.0], 'cyclic'),  # Typical cyclic motion
+             ([0.2, 1.0, 0.5, 0.8, 1.0], [0.5, 0.0], 'chaotic'),  # Chaotic motion
+         ]
+     },
     'Quartic_Oscillator': {
         'DCF_values': ['Poly', 4, 0],
         'rhs_function': lambda t, y, params: [
